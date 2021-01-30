@@ -12,8 +12,8 @@ class Card:
         self.isRed = isRed # bool
         self.isGreen = isGreen # bool
         self.isSnow = isSnow # bool
-        self.TypeLine = TypeLine # bool
-        self.Jank = Jank # int from 1-10, 10 being Jankier
+        self.TypeLine = TypeLine # string
+        self.Jank = int(Jank) # int from 1-10, 10 being Jankier
     def GSZable(self):
         if self.isGreen and "Creature" in self.TypeLine:
             return(True)
@@ -112,6 +112,7 @@ def main(loops):
 
         GSZCount = 4 # Setting to 4, because Vets.
         SnowCount = 0
+        JankScore = 0 # Used to track how Janky the deck is.
         Added = [] # Created so that added card objects are in a list for future reference.
         Card_Count = 8 # Initial count for the vets and Cabal Therapies
         while Card_Count < 39:
@@ -124,6 +125,7 @@ def main(loops):
                     # Check colors match            
                     if (DeckWhite == Adding.isWhite or DeckWhite) and (DeckBlue == Adding.isBlue or DeckBlue) and (DeckRed == Adding.isRed or DeckRed): # Color Checking
                         count = random.randint(int(Adding.MinCount),int(Adding.MaxCount)) # Pick how many to add
+                        JankScore = JankScore + (int(Adding.Jank) * count) # Update the running Jank Score of the Deck
                         Decklist[Adding.name] = count # Assign it into the deck dict
                         Added.append(Adding) # Add these in to another list for land count later
                         if Adding.GSZable():
@@ -140,6 +142,7 @@ def main(loops):
                             else:
                                 del Decklist[Adding.name]
                                 del Added[-1]
+                                JankScore = JankScore - (int(Adding.Jank) * count)
                         if Adding.name == "Arena Rector": # Special Handling for Arena Rector (Yes, it intentionally works a little different than the Academy rector section)
                             if Card_Count < 34:
                                 for i in ["Ugin, the Spirit Dragon","Nicol Bolas, Planeswalker","Nicol Bolas, God-Pharaoh","Karn Liberated","Elspeth, Sun's Champion","Nicol Bolas, Dragon-God"]:
@@ -149,15 +152,18 @@ def main(loops):
                             else:
                                 del Decklist[Adding.name]
                                 del Added[-1]
+                                JankScore = JankScore - (int(Adding.Jank) * count)
                         if Adding.name == "Stoneforge Mystic":
                             offset = random.randint(0,2) # Add an Equipment, This works because the Equipment is next to SFM in the database.
                             equipment = All_Available_Cards.pop(index + offset)
                             Added.append(equipment)
                             Decklist[equipment.name] = 1
+                            JankScore = JankScore + (int(equipment.Jank) * count)
                             offset = random.randint(0,1)  # do it again!
                             equipment = All_Available_Cards.pop(index + offset)
                             Added.append(equipment)
                             Decklist[equipment.name] = 1
+                            JankScore = JankScore + (int(equipment.Jank) * count)
                         # "Partners With" and other simple synergy Cards (should try to make this into a function at some point)
                         if Adding.name == "Zealous Conscripts":
                             if All_Available_Cards[index].name == "Kiki-Jiki, Mirror Breaker":
@@ -166,6 +172,7 @@ def main(loops):
                             else:
                                 del Decklist[Adding.name]
                                 del Added[-1]
+                                JankScore = JankScore - (int(Adding.Jank) * count)
                         if Adding.name == "Kiki-Jiki, Mirror Breaker":
                             if All_Available_Cards[index - 1].name == "Zealous Conscripts":
                                 Decklist["Zealous Conscripts"] = 1
@@ -173,6 +180,7 @@ def main(loops):
                             else:
                                 del Decklist[Adding.name]
                                 del Added[-1]
+                                JankScore = JankScore - (int(Adding.Jank) * count)
                         if Adding.name == "Punishing Fire":
                             Decklist["Grove of the Burnwillows"] = 2
                         if Adding.name == "Pir, Imaginative Rascal" and DeckBlue:
@@ -182,6 +190,7 @@ def main(loops):
                             else:
                                 del Decklist[Adding.name]
                                 del Added[-1]
+                                JankScore = JankScore - (int(Adding.Jank) * count)
                         if Adding.name == "Toothy, Imaginary Friend":
                             if All_Available_Cards[index - 1].name == "Pir, Imaginative Rascal":
                                 Decklist["Pir, Imaginative Rascal"] = 1
@@ -190,6 +199,7 @@ def main(loops):
                             else:
                                 del Decklist[Adding.name]
                                 del Added[-1]
+                                JankScore = JankScore - (int(Adding.Jank) * count)
                         if Adding.name == "Yannik, Scavenging Sentinel":
                             if All_Available_Cards[index].name == "Nikara, Lair Scavenger":
                                 Decklist["Nikara, Lair Scavenger"] = 1
@@ -197,6 +207,7 @@ def main(loops):
                             else:
                                 del Decklist[Adding.name]
                                 del Added[-1]
+                                JankScore = JankScore - (int(Adding.Jank) * count)
                         if Adding.name == "Nikara, Lair Scavenger":
                             if All_Available_Cards[index - 1].name == "Yannik, Scavenging Sentinel":
                                 Decklist["Yannik, Scavenging Sentinel"] = 1
@@ -205,6 +216,7 @@ def main(loops):
                             else:
                                 del Decklist[Adding.name]
                                 del Added[-1]
+                                JankScore = JankScore - (int(Adding.Jank) * count)
             Card_Count = 1 # Again, setting for the Bayou that will be added later
             for i in Decklist:
                 Card_Count = Card_Count + Decklist[i]
@@ -571,11 +583,12 @@ def main(loops):
             print("")
             print("Sideboard:")
             Printer(Sideboard)
+            print("Jank Score: ", int((JankScore/len(Decklist)) * 12)) # Multiplying by 12 to make it possible to get a jank score of 69
         else: # Write to file if looping multiple times
             File = open("./Output/MTGO/MTGO_Deck" + str(cycles) + ".txt", "w+")  # Also note, that because I'm lazy, you have to make the directories ahead of time.
             Writer(File, Decklist)
             File = open("./Output/Formatted/Title_" + str(cycles) + ".txt", "w+")
-            File.write(str(DeckName))
+            File.write(str(DeckName + " (Jank Score:" + str(int((JankScore/len(Decklist) * 12))) + ")")) # Multiplying by 12 to make it possible to get a jank score of 69
             File.close()
             File = open("./Output/Formatted/Decklist_" + str(cycles) + ".txt", "w+")
             File.write("Creatures: (" + str(count_deck(Creatures)) + ")\n")
