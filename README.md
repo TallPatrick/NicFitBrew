@@ -3,7 +3,7 @@ So, you wanna build some nic fit decks?  This script will do it for you.  sort o
 
 # "Set up"
 First, you need to run the "List_generator.py" With your input.txt.
-This input file is very strict in the format.  It needs to contain the following on each line in specifically this order:
+This input file is very strict in the format.  It needs to contain the following on each line in specifically this order: </br>
 (Jank Score 1-10, with 10 being jankiest) (Minimum amount to add to the deck) (Maximum amount to add to the deck) (Exact Card Name)
 
 Feel free to look at the included file for my ratings, and card list.  Append to it if you'd like.  it's probably easier that way.
