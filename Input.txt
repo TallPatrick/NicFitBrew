@@ -30,7 +30,6 @@
 4 1 1 Meren of Clan Nel Toth
 1 1 3 Pernicious Deed
 8 1 1 Emrakul, the Promised End
-2 3 4 Arcum's Astrolabe
 7 1 1 Custodi Lich
 4 1 3 Birthing Pod
 5 1 1 Yawgmoth, Thran Physician
@@ -69,7 +68,6 @@
 5 2 2 Mayhem Devil
 6 1 3 Dire Fleet Daredevil
 8 1 1 Seasoned Pyromancer
-3 2 3 Oko, Thief of Crowns
 3 2 4 Uro, Titan of Nature's Wrath
 2 3 4 Ice-Fang Coatl
 4 1 2 Cryptic Command
@@ -199,3 +197,13 @@
 8 1 1 Plaguecrafter
 6 1 1 Greater Gargadon
 9 1 2 Colossal Dreadmaw
+9 1 3 Mystic Reflection
+8 1 1 Egon, God of Death
+6 1 2 Jorn, God of Winter
+8 1 2 In Search of Greatness
+5 1 2 Sarulf, Realm Eater
+7 2 4 Bloodsky Berserker
+8 2 4 Clarion Spirit
+8 1 2 Harald, King of Skemfar
+7 2 2 Realmwalker
+9 1 1 Narfi, Betrayer King

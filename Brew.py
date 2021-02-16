@@ -378,7 +378,7 @@ def main(loops):
 
         # Snow Support
 
-        if SnowCount > 0 or random.randint(0,2) == 0:
+        if SnowCount > 0 or random.randint(0,6) == 0:
             for land in ["Forest","Swamp","Island","Plains","Mountain"]:
                 if land in Decklist:
                     Decklist["Snow-Covered " + land] = Decklist.pop(land)

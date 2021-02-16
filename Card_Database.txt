@@ -198,3 +198,212 @@ Gamekeeper|8|1|2| |Creature — Elf|G
 City of Solitude|9|1|1| |Enchantment|G
 Plaguecrafter|8|1|1| |Creature — Human Shaman|B
 Greater Gargadon|6|1|1| |Creature — Beast|R
+Eternal Witness|1|1|4| |Creature — Human Shaman|G
+Village Rites|2|2|4| |Instant|B
+Sylvan Library|2|2|4| |Enchantment|G
+Mirri's Guile|4|1|3| |Enchantment|G
+Thragtusk|4|1|2| |Creature — Beast|G
+Primeval Titan|4|2|3| |Creature — Giant|G
+Tireless Tracker|3|1|3| |Creature — Human Scout|G
+Biogenic Ooze|6|1|1| |Creature — Ooze|G
+Carnage Tyrant|5|1|3| |Creature — Dinosaur|G
+Thrun, the Last Troll|6|1|2| |Legendary Creature — Troll Shaman|G
+Elder Gargaroth|8|1|2| |Creature — Beast|G
+Questing Beast|5|1|3| |Legendary Creature — Beast|G
+Reclamation Sage|3|1|2| |Creature — Elf Shaman|G
+Strangleroot Geist|7|2|3| |Creature — Spirit|G
+Nissa Vital Force|5|1|2| |Legendary Planeswalker — Nissa|G
+Nissa Vastwood Seer|8|1|2| |Legendary Creature — Elf Scout // Legendary Planeswalker — Nissa|G
+Thoughtseize|3|2|4| |Sorcery|B
+Bitterblossom|5|1|3| |Tribal Enchantment — Faerie|B
+Toxic Deluge|4|1|3| |Sorcery|B
+Fierce Empath|7|1|4| |Creature — Elf|G
+Scavenging Ooze|5|1|3| |Creature — Ooze|G
+Liliana, the Last Hope|4|1|2| |Legendary Planeswalker — Liliana|B
+Liliana of the Veil|3|2|3| |Legendary Planeswalker — Liliana|B
+Diabolic Edict|5|1|2| |Instant|B
+Liliana's Triumph|4|1|3| |Instant|B
+Recurring Nightmare|6|1|3| |Enchantment|B
+Abrupt Decay|2|2|4| |Instant|B|G
+Assassin's Trophy|1|2|4| |Instant|B|G
+Maelstrom Pulse|3|1|3| |Sorcery|B|G
+Meren of Clan Nel Toth|4|1|1| |Legendary Creature — Human Shaman|B|G
+Pernicious Deed|1|1|3| |Enchantment|B|G
+Emrakul, the Promised End|8|1|1| |Legendary Creature — Eldrazi|
+Custodi Lich|7|1|1| |Creature — Zombie Cleric|B
+Birthing Pod|4|1|3| |Artifact|G
+Yawgmoth, Thran Physician|5|1|1| |Legendary Creature — Human Cleric|B
+Scute Mob|6|1|2| |Creature — Insect|G
+Scute Swarm|7|1|3| |Creature — Insect|G
+Hymn to Tourach|4|1|3| |Sorcery|B
+Panglacial Wurm|8|1|1| |Creature — Wurm|G
+Vraska Golgari Queen|3|1|2| |Legendary Planeswalker — Vraska|B|G
+Painful Truths|3|1|3| |Sorcery|B
+Ripjaw Raptor|5|1|2| |Creature — Dinosaur|G
+Life from the Loam|4|2|3| |Sorcery|G
+Worm Harvest|8|1|1| |Sorcery|B|G
+Raven's Crime|9|1|2| |Sorcery|B
+Plague Engineer|3|1|2| |Creature — Carrier|B
+Once Upon a Time|2|3|4| |Instant|G
+The Eldest Reborn|6|1|1| |Enchantment — Saga|B
+Dryad Arbor|1|1|1| |Land Creature — Forest Dryad|G
+Grim Flayer|5|1|3| |Creature — Human Warrior|B|G
+Collective Brutality|2|2|4| |Sorcery|B
+Eldritch Evolution|4|1|3| |Sorcery|G
+Huntmaster of the Fells|6|1|2| |Creature — Human Werewolf // Creature — Werewolf|G|R
+Wasitora Nekoru Queen|8|1|1| |Legendary Creature — Cat Dragon|B|G|R
+Dragon Broodmother|7|1|1| |Creature — Dragon|G|R
+Broodmate Dragon|7|1|1| |Creature — Dragon|B|G|R
+Punishing Fire|5|3|4| |Instant|R
+Klothys, God of Destiny|5|1|1| |Legendary Enchantment Creature — God|G|R
+Lightning Bolt|6|2|3| |Instant|R
+Regisaur Alpha|7|1|1| |Creature — Dinosaur|G|R
+Kolaghan's Command|3|2|3| |Instant|B|R
+Gruul Spellbreaker|4|1|2| |Creature — Ogre Warrior|G|R
+Chandra, Torch of Defiance|6|1|2| |Legendary Planeswalker — Chandra|R
+Zealous Conscripts|7|1|1| |Creature — Human Warrior|R
+Kiki-Jiki, Mirror Breaker|7|1|1| |Legendary Creature — Goblin Shaman|R
+Ruric Thar, the Unbowed|7|1|1| |Legendary Creature — Ogre Warrior|G|R
+Angrath, the Flame Chained|6|1|1| |Legendary Planeswalker — Angrath|B|R
+Mayhem Devil|5|2|2| |Creature — Devil|B|R
+Dire Fleet Daredevil|6|1|3| |Creature — Human Pirate|R
+Seasoned Pyromancer|8|1|1| |Creature — Human Shaman|R
+Uro, Titan of Nature's Wrath|3|2|4| |Legendary Creature — Elder Giant|G|U
+Ice-Fang Coatl|2|3|4|S|Snow Creature — Snake|G|U
+Cryptic Command|4|1|2| |Instant|U
+Search for Azcanta|3|1|2| |Legendary Enchantment // Legendary Land|U
+Baleful Strix|3|1|3| |Artifact Creature — Bird|B|U
+Hostage Taker|6|1|1| |Creature — Human Pirate|B|U
+The Scarab God|8|1|1| |Legendary Creature — God|B|U
+Leovold, Emissary of Trest|2|1|1| |Legendary Creature — Elf Advisor|B|G|U
+Yarok, the Desecrated|4|1|1| |Legendary Creature — Elemental Horror|B|G|U
+Zegana, Utopian Speaker|4|1|1| |Legendary Creature — Merfolk Wizard|G|U
+Prophet of Kruphix|4|1|2| |Creature — Human Wizard|G|U
+Jace the Mind Sculptor|3|1|1| |Legendary Planeswalker — Jace|U
+Pir, Imaginative Rascal|6|1|1| |Legendary Creature — Human|G
+Toothy, Imaginary Friend|6|1|1| |Legendary Creature — Illusion|U
+Brainstorm|2|3|4| |Instant|U
+Ponder|3|3|4| |Sorcery|U
+Force of Will|3|2|4| |Instant|U
+Risen Reef|4|2|4| |Creature — Elemental|G|U
+Coiling Oracle|5|2|4| |Creature — Snake Elf Druid|G|U
+Knight of Autumn|3|1|2| |Creature — Dryad Knight|G|W
+Stoneforge Mystic|2|1|2| |Creature — Kor Artificer|W
+Umezawa's Jitte|8|1|2| |Legendary Artifact — Equipment|
+Batterskull|7|1|1| |Artifact — Equipment|
+Sword of Feast and Famine|8|1|1| |Artifact — Equipment|
+Eladamri's Call|6|1|3| |Instant|G|W
+Sun Titan|6|1|2| |Creature — Giant|W
+Kaya, Ghost Assassin|4|1|1| |Legendary Planeswalker — Kaya|B|W
+Kaya, Orzhov Usurper|5|1|1| |Legendary Planeswalker — Kaya|B|W
+Magister of Worth|7|1|1| |Creature — Angel|B|W
+Kambal, Consul of Allocation|6|1|1| |Legendary Creature — Human Advisor|B|W
+Peacekeeper|8|1|1| |Creature — Human|W
+Sigarda, Host of Herons|3|1|1| |Legendary Creature — Angel|G|W
+Nethroi, Apex of Death|4|1|1| |Legendary Creature — Cat Nightmare Beast|B|G|W
+Palace Jailer|4|1|2| |Creature — Human Soldier|W
+Court of Grace|7|1|1| |Enchantment|W
+Lingering Souls|4|2|4| |Sorcery|B|W
+Swords to Plowshares|2|2|4| |Instant|W
+Yannik, Scavenging Sentinel|6|1|1| |Legendary Creature — Hyena Beast|G|W
+Nikara, Lair Scavenger|6|1|1| |Legendary Creature — Human Cleric|B
+Archon of Valor's Reach|7|1|1| |Creature — Archon|G|W
+Karador, Ghost Chieftain|6|1|1| |Legendary Creature — Centaur Spirit|B|G|W
+Elspeth Conquers Death|5|1|2| |Enchantment — Saga|W
+Renegade Rallier|4|1|2| |Creature — Human Warrior|G|W
+Gaddock Teeg|3|1|1| |Legendary Creature — Kithkin Advisor|G|W
+Saffi Eriksdotter|7|1|1| |Legendary Creature — Human Scout|G|W
+Atraxa, Praetors' Voice|8|1|1| |Legendary Creature — Angel Horror|B|G|U|W
+Omnath, Locus of Creation|6|1|3| |Legendary Creature — Elemental|G|R|U|W
+Abundant Growth|6|1|2| |Enchantment — Aura|G
+Collector Ouphe|4|1|1| |Creature — Ouphe|G
+Dead of Winter|4|1|3|S|Sorcery|B
+Force of Negation|5|1|3| |Instant|U
+Growth Spiral|5|1|2| |Instant|G|U
+Path to Exile|4|1|3| |Instant|W
+Ugin, the Spirit Dragon|7|1|2| |Legendary Planeswalker — Ugin|
+Academy Rector|4|3|4| |Creature — Human Cleric|W
+Arena Rector|4|2|4| |Creature — Human Cleric|W
+Living Wish|7|3|4| |Sorcery|G
+Crop Rotation|6|3|4| |Instant|G
+Ashiok, Nightmare Muse|8|1|1| |Legendary Planeswalker — Ashiok|B|U
+Garruk, Cursed Huntsman|8|1|1| |Legendary Planeswalker — Garruk|B|G
+Hexdrinker|5|1|2| |Creature — Snake|G
+Tarmogoyf|5|1|1| |Creature — Lhurgoyf|G
+Titania, Protector of Argoth|4|1|1| |Legendary Creature — Elemental|G
+Ramunap Excavator|3|1|2| |Creature — Naga Cleric|G
+Dryad of the Ilysian Grove|5|1|2| |Enchantment Creature — Nymph Dryad|G
+Courser of Kruphix|5|1|2| |Enchantment Creature — Centaur|G
+Kitchen Finks|6|1|1| |Creature — Ouphe|G|W
+Sakura-Tribe Elder|7|1|2| |Creature — Snake Shaman|G
+Recruiter of the Guard|6|1|2| |Creature — Human Soldier|W
+Evolutionary Leap|5|1|3| |Enchantment|G
+Finale of Devastation|4|1|2| |Sorcery|G
+Nicol Bolas, Planeswalker|7|1|1| |Legendary Planeswalker — Bolas|B|R|U
+Nicol Bolas, Dragon-God|7|1|1| |Legendary Planeswalker — Bolas|B|R|U
+Karn Liberated|7|1|2| |Legendary Planeswalker — Karn|
+Nicol Bolas, God-Pharaoh|7|1|1| |Legendary Planeswalker — Bolas|B|R|U
+Gideon of the Trials|6|1|1| |Legendary Planeswalker — Gideon|W
+Gideon, Ally of Zendikar|6|1|1| |Legendary Planeswalker — Gideon|W
+Liliana, Dreadhorde General|6|1|1| |Legendary Planeswalker — Liliana|B
+Neoform|6|1|3| |Sorcery|G|U
+Acidic Slime|3|1|2| |Creature — Ooze|G
+Elvish Reclaimer|7|2|3| |Creature — Elf Warrior|G
+Fiend Artisan|3|1|3| |Creature — Nightmare|B|G
+Knight of the Reliquary|6|1|2| |Creature — Human Knight|G|W
+Muldrotha, the Gravetide|6|1|1| |Legendary Creature — Elemental Avatar|B|G|U
+Siege Rhino|2|2|4| |Creature — Rhino|B|G|W
+Soulherder|6|2|3| |Creature — Spirit|U|W
+Teysa Karlov|7|1|1| |Legendary Creature — Human Advisor|B|W
+The Gitrog Monster|7|1|1| |Legendary Creature — Frog Horror|B|G
+Tidehollow Sculler|6|1|2| |Artifact Creature — Zombie|B|W
+Underrealm Lich|6|1|1| |Creature — Zombie Elf Shaman|B|G
+Chord of Calling|5|1|2| |Instant|G
+Garruk Relentless|4|1|3| |Legendary Planeswalker — Garruk // Legendary Planeswalker — Garruk|B|G
+Diabolic Intent|5|1|4| |Sorcery|B
+Confounding Conundrum|8|2|4| |Enchantment|U
+Polukranos, Unchained|6|1|1| |Legendary Creature — Zombie Hydra|B|G
+Grakmaw, Skyclave Ravager|8|1|1| |Legendary Creature — Hydra Horror|B|G
+Cabal Therapist|9|1|1| |Creature — Horror|B
+Nightpack Ambusher|8|1|2| |Creature — Wolf|G
+Tolsimir, Friend to Wolves|8|1|1| |Legendary Creature — Elf Scout|G|W
+Garruk, Apex Predator|9|1|1| |Legendary Planeswalker — Garruk|B|G
+Yorvo, Lord of Garenbrig|8|1|1| |Legendary Creature — Giant Noble|G
+Captain Sisay|9|1|1| |Legendary Creature — Human Soldier|G|W
+Shalai, Voice of Plenty|8|1|1| |Legendary Creature — Angel|G|W
+Pelakka Wurm|8|1|1| |Creature — Wurm|G
+Craterhoof Behemoth|9|1|1| |Creature — Beast|G
+Wurmcoil Engine|9|1|1| |Artifact Creature — Wurm|
+Syr Konrad, the Grim|7|1|1| |Legendary Creature — Human Knight|B
+Tamiyo, Collector of Tales|8|1|1| |Legendary Planeswalker — Tamiyo|G|U
+Notion Thief|9|1|1| |Creature — Human Rogue|B|U
+Opposition Agent|5|2|3| |Creature — Human Rogue|B
+Yuriko, the Tiger's Shadow|9|1|1| |Legendary Creature — Human Ninja|B|U
+Shardless Agent|8|1|3| |Artifact Creature — Human Rogue|G|U
+Sorin, Grim Nemesis|8|1|1| |Legendary Planeswalker — Sorin|B|W
+Collected Company|8|2|3| |Instant|G
+Jolrael, Empress of Beasts|9|1|1| |Legendary Creature — Human Spellshaper|G
+Duress|7|2|3| |Sorcery|B
+Voice of Resurgence|8|1|1| |Creature — Elemental|G|W
+Shifting Ceratops|6|1|2| |Creature — Dinosaur|G
+Grave Titan|8|1|1| |Creature — Giant|B
+Niv-Mizzet Reborn|9|1|1| |Legendary Creature — Dragon Avatar|B|G|R|U|W
+Oath of Kaya|8|1|1| |Legendary Enchantment|B|W
+Kaya's Guile|8|2|2| |Instant|B|W
+Inquisition of Kozilek|6|1|3| |Sorcery|B
+Vivien, Monsters' Advocate|6|1|1| |Legendary Planeswalker — Vivien|G
+Gamekeeper|8|1|2| |Creature — Elf|G
+City of Solitude|9|1|1| |Enchantment|G
+Plaguecrafter|8|1|1| |Creature — Human Shaman|B
+Greater Gargadon|6|1|1| |Creature — Beast|R
+Colossal Dreadmaw|9|1|2| |Creature — Dinosaur|G
+Mystic Reflection|9|1|3| |Instant|U
+Egon, God of Death|8|1|1| |Legendary Creature — God // Legendary Artifact|B
+Jorn, God of Winter|6|1|2|S|Legendary Snow Creature — God // Legendary Snow Artifact|B|G|U
+In Search of Greatness|8|1|2| |Enchantment|G
+Sarulf, Realm Eater|5|1|2| |Legendary Creature — Wolf|B|G
+Bloodsky Berserker|7|2|4| |Creature — Human Berserker|B
+Clarion Spirit|8|2|4| |Creature — Spirit|W
+Harald, King of Skemfar|8|1|2| |Legendary Creature — Elf Warrior|B|G
+Realmwalker|7|2|2| |Creature — Shapeshifter|G
+Narfi, Betrayer King|9|1|1|S|Legendary Snow Creature — Zombie Wizard|B|U
