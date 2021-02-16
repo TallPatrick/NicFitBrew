@@ -121,102 +121,104 @@ def main(loops):
             else:
                 index = random.randint(0,len(All_Available_Cards)-1)
                 Adding = All_Available_Cards.pop(index)
-                if Adding.JankTest: # Do the Jank Test and only add the card if it passes
-                    # Check colors match            
-                    if (DeckWhite == Adding.isWhite or DeckWhite) and (DeckBlue == Adding.isBlue or DeckBlue) and (DeckRed == Adding.isRed or DeckRed): # Color Checking
-                        count = random.randint(int(Adding.MinCount),int(Adding.MaxCount)) # Pick how many to add
-                        JankScore = JankScore + (int(Adding.Jank) * count) # Update the running Jank Score of the Deck
-                        Decklist[Adding.name] = count # Assign it into the deck dict
-                        Added.append(Adding) # Add these in to another list for land count later
-                        if Adding.GSZable():
-                            GSZCount = GSZCount + count
-                        if Adding.isSnow:
-                            SnowCount = SnowCount + count
-                        # Begin Special Cases
-                        # Rectors
-                        if Adding.name == "Academy Rector": # Special Handling for Academy Rector
-                            if Card_Count < 34:
-                                for i in ["Curse of Misfortunes","Curse of Death's Hold","Curse of Exhaustion","Overwhelming Splendor","Cruel Reality","Dovescape","Ethereal Absolution","Sandwurm Convergence","Omniscience","Starfield of Nyx"]:
-                                    if random.randint(0,1) == 1:
-                                        Decklist[i] = 1
-                            else:
-                                del Decklist[Adding.name]
-                                del Added[-1]
-                                JankScore = JankScore - (int(Adding.Jank) * count)
-                        if Adding.name == "Arena Rector": # Special Handling for Arena Rector (Yes, it intentionally works a little different than the Academy rector section)
-                            if Card_Count < 34:
-                                for i in ["Ugin, the Spirit Dragon","Nicol Bolas, Planeswalker","Nicol Bolas, God-Pharaoh","Karn Liberated","Elspeth, Sun's Champion","Nicol Bolas, Dragon-God"]:
-                                    rand_count = random.randint(0,2)
-                                    if rand_count != 0:
-                                        Decklist[i] = rand_count
-                            else:
-                                del Decklist[Adding.name]
-                                del Added[-1]
-                                JankScore = JankScore - (int(Adding.Jank) * count)
-                        if Adding.name == "Stoneforge Mystic":
-                            offset = random.randint(0,2) # Add an Equipment, This works because the Equipment is next to SFM in the database.
-                            equipment = All_Available_Cards.pop(index + offset)
-                            Added.append(equipment)
-                            Decklist[equipment.name] = 1
-                            JankScore = JankScore + (int(equipment.Jank) * count)
-                            offset = random.randint(0,1)  # do it again!
-                            equipment = All_Available_Cards.pop(index + offset)
-                            Added.append(equipment)
-                            Decklist[equipment.name] = 1
-                            JankScore = JankScore + (int(equipment.Jank) * count)
-                        # "Partners With" and other simple synergy Cards (should try to make this into a function at some point)
-                        if Adding.name == "Zealous Conscripts":
-                            if All_Available_Cards[index].name == "Kiki-Jiki, Mirror Breaker":
-                                Decklist["Kiki-Jiki, Mirror Breaker"] = 1
-                                Added.append(All_Available_Cards.pop(index)) # Adding synergy card, which is adjacent in the list
-                            else:
-                                del Decklist[Adding.name]
-                                del Added[-1]
-                                JankScore = JankScore - (int(Adding.Jank) * count)
-                        if Adding.name == "Kiki-Jiki, Mirror Breaker":
-                            if All_Available_Cards[index - 1].name == "Zealous Conscripts":
-                                Decklist["Zealous Conscripts"] = 1
-                                Added.append(All_Available_Cards.pop(index - 1)) # Adding synergy card, which is adjacent in the list
-                            else:
-                                del Decklist[Adding.name]
-                                del Added[-1]
-                                JankScore = JankScore - (int(Adding.Jank) * count)
-                        if Adding.name == "Punishing Fire":
-                            Decklist["Grove of the Burnwillows"] = 2
-                        if Adding.name == "Pir, Imaginative Rascal" and DeckBlue:
-                            if All_Available_Cards[index].name == "Toothy, Imaginary Friend":
-                                Decklist["Toothy, Imaginary Friend"] = 1
-                                Added.append(All_Available_Cards.pop(index)) # Adding partner card, which is adjacent in the list
-                            else:
-                                del Decklist[Adding.name]
-                                del Added[-1]
-                                JankScore = JankScore - (int(Adding.Jank) * count)
-                        if Adding.name == "Toothy, Imaginary Friend":
-                            if All_Available_Cards[index - 1].name == "Pir, Imaginative Rascal":
-                                Decklist["Pir, Imaginative Rascal"] = 1
-                                Added.append(All_Available_Cards.pop(index - 1)) # Adding partner card, which is adjacent in the list
-                                GSZCount = GSZCount + 1
-                            else:
-                                del Decklist[Adding.name]
-                                del Added[-1]
-                                JankScore = JankScore - (int(Adding.Jank) * count)
-                        if Adding.name == "Yannik, Scavenging Sentinel":
-                            if All_Available_Cards[index].name == "Nikara, Lair Scavenger":
-                                Decklist["Nikara, Lair Scavenger"] = 1
-                                Added.append(All_Available_Cards.pop(index)) # Adding partner card, which is adjacent in the list
-                            else:
-                                del Decklist[Adding.name]
-                                del Added[-1]
-                                JankScore = JankScore - (int(Adding.Jank) * count)
-                        if Adding.name == "Nikara, Lair Scavenger":
-                            if All_Available_Cards[index - 1].name == "Yannik, Scavenging Sentinel":
-                                Decklist["Yannik, Scavenging Sentinel"] = 1
-                                Added.append(All_Available_Cards.pop(index - 1)) # Adding partner card, which is adjacent in the list
-                                GSZCount = GSZCount + 1
-                            else:
-                                del Decklist[Adding.name]
-                                del Added[-1]
-                                JankScore = JankScore - (int(Adding.Jank) * count)
+                if Adding.name not in Decklist: # Detection for edge cases around Rectors and other special cards
+                    if Adding.JankTest: # Do the Jank Test and only add the card if it passes
+                        # Check colors match            
+                        if (DeckWhite == Adding.isWhite or DeckWhite) and (DeckBlue == Adding.isBlue or DeckBlue) and (DeckRed == Adding.isRed or DeckRed): # Color Checking
+                            count = random.randint(int(Adding.MinCount),int(Adding.MaxCount)) # Pick how many to add
+                            JankScore = JankScore + (int(Adding.Jank) * count) # Update the running Jank Score of the Deck
+                            Decklist[Adding.name] = count # Assign it into the deck dict
+                            Added.append(Adding) # Add these in to another list for land count later
+                            if Adding.GSZable():
+                                GSZCount = GSZCount + count
+                            if Adding.isSnow:
+                                SnowCount = SnowCount + count
+                            # Begin Special Cases
+                            # Rectors
+                            if Adding.name == "Academy Rector": # Special Handling for Academy Rector
+                                if Card_Count > 34:
+                                    del Decklist[Adding.name]
+                                    del Added[-1]
+                                    JankScore = JankScore - (int(Adding.Jank) * count)
+                                else:
+                                    print("Added Academy Rector")
+                                    for i in ["Curse of Misfortunes","Curse of Death's Hold","Curse of Exhaustion","Overwhelming Splendor","Cruel Reality","Dovescape","Ethereal Absolution","Sandwurm Convergence","Omniscience","Starfield of Nyx"]:
+                                        if random.randint(0,1) == 1:
+                                            Decklist[i] = 1
+                            if Adding.name == "Arena Rector": # Special Handling for Arena Rector (Yes, it intentionally works a little different than the Academy rector section)
+                                if Card_Count > 34:
+                                    del Decklist[Adding.name]
+                                    del Added[-1]
+                                    JankScore = JankScore - (int(Adding.Jank) * count)
+                                else:
+                                    for i in ["Ugin, the Spirit Dragon","Nicol Bolas, Planeswalker","Nicol Bolas, God-Pharaoh","Karn Liberated","Elspeth, Sun's Champion","Nicol Bolas, Dragon-God"]:
+                                        rand_count = random.randint(0,2)
+                                        if rand_count != 0:
+                                            Decklist[i] = rand_count
+                            if Adding.name == "Stoneforge Mystic":
+                                offset = random.randint(0,2) # Add an Equipment, This works because the Equipment is next to SFM in the database.
+                                equipment = All_Available_Cards.pop(index + offset)
+                                Added.append(equipment)
+                                Decklist[equipment.name] = 1
+                                JankScore = JankScore + (int(equipment.Jank) * count)
+                                offset = random.randint(0,1)  # do it again!
+                                equipment = All_Available_Cards.pop(index + offset)
+                                Added.append(equipment)
+                                Decklist[equipment.name] = 1
+                                JankScore = JankScore + (int(equipment.Jank) * count)
+                            # "Partners With" and other simple synergy Cards (should try to make this into a function at some point)
+                            if Adding.name == "Zealous Conscripts":
+                                if All_Available_Cards[index].name == "Kiki-Jiki, Mirror Breaker":
+                                    Decklist["Kiki-Jiki, Mirror Breaker"] = 1
+                                    Added.append(All_Available_Cards.pop(index)) # Adding synergy card, which is adjacent in the list
+                                else:
+                                    del Decklist[Adding.name]
+                                    del Added[-1]
+                                    JankScore = JankScore - (int(Adding.Jank) * count)
+                            if Adding.name == "Kiki-Jiki, Mirror Breaker":
+                                if All_Available_Cards[index - 1].name == "Zealous Conscripts":
+                                    Decklist["Zealous Conscripts"] = 1
+                                    Added.append(All_Available_Cards.pop(index - 1)) # Adding synergy card, which is adjacent in the list
+                                else:
+                                    del Decklist[Adding.name]
+                                    del Added[-1]
+                                    JankScore = JankScore - (int(Adding.Jank) * count)
+                            if Adding.name == "Punishing Fire":
+                                Decklist["Grove of the Burnwillows"] = 2
+                            if Adding.name == "Pir, Imaginative Rascal" and DeckBlue:
+                                if All_Available_Cards[index].name == "Toothy, Imaginary Friend":
+                                    Decklist["Toothy, Imaginary Friend"] = 1
+                                    Added.append(All_Available_Cards.pop(index)) # Adding partner card, which is adjacent in the list
+                                else:
+                                    del Decklist[Adding.name]
+                                    del Added[-1]
+                                    JankScore = JankScore - (int(Adding.Jank) * count)
+                            if Adding.name == "Toothy, Imaginary Friend":
+                                if All_Available_Cards[index - 1].name == "Pir, Imaginative Rascal":
+                                    Decklist["Pir, Imaginative Rascal"] = 1
+                                    Added.append(All_Available_Cards.pop(index - 1)) # Adding partner card, which is adjacent in the list
+                                    GSZCount = GSZCount + 1
+                                else:
+                                    del Decklist[Adding.name]
+                                    del Added[-1]
+                                    JankScore = JankScore - (int(Adding.Jank) * count)
+                            if Adding.name == "Yannik, Scavenging Sentinel":
+                                if All_Available_Cards[index].name == "Nikara, Lair Scavenger":
+                                    Decklist["Nikara, Lair Scavenger"] = 1
+                                    Added.append(All_Available_Cards.pop(index)) # Adding partner card, which is adjacent in the list
+                                else:
+                                    del Decklist[Adding.name]
+                                    del Added[-1]
+                                    JankScore = JankScore - (int(Adding.Jank) * count)
+                            if Adding.name == "Nikara, Lair Scavenger":
+                                if All_Available_Cards[index - 1].name == "Yannik, Scavenging Sentinel":
+                                    Decklist["Yannik, Scavenging Sentinel"] = 1
+                                    Added.append(All_Available_Cards.pop(index - 1)) # Adding partner card, which is adjacent in the list
+                                    GSZCount = GSZCount + 1
+                                else:
+                                    del Decklist[Adding.name]
+                                    del Added[-1]
+                                    JankScore = JankScore - (int(Adding.Jank) * count)
             Card_Count = 1 # Again, setting for the Bayou that will be added later
             for i in Decklist:
                 Card_Count = Card_Count + Decklist[i]
