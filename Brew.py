@@ -151,7 +151,7 @@ def main(loops):
                                     del Added[-1]
                                     JankScore = JankScore - (int(Adding.Jank) * count)
                                 else:
-                                    for i in ["Ugin, the Spirit Dragon","Nicol Bolas, Planeswalker","Nicol Bolas, God-Pharaoh","Karn Liberated","Elspeth, Sun's Champion","Nicol Bolas, Dragon-God"]:
+                                    for i in ["Ugin, the Spirit Dragon","Nicol Bolas, Planeswalker","Nicol Bolas, God-Pharaoh","Karn Liberated","Elspeth, Sun's Champion","Nicol Bolas, Dragon-God","Professor Onyx"]:
                                         rand_count = random.randint(0,2)
                                         if rand_count != 0:
                                             Decklist[i] = rand_count
